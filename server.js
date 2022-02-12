@@ -9,6 +9,9 @@ console.log (PORT)
 
 // MIDDLEWARE
 //app.use(express.json())
+app.set('views', __dirname + '/views')
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
 
 // ROUTES
 app.get('/', (req, res) => {
